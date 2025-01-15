@@ -1,9 +1,14 @@
 <svg width="19" height="7" viewBox="0 0 19 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_185_1206)">
+<g clip-path="url(#clip0_255_697)">
+<mask id="mask0_255_697" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="19" height="7">
+<path d="M19 0H0V7H19V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_255_697)">
 <path d="M-5.5 3.1C-4.2 4.1 -2.8 6.3 0 6.3C2.8 6.3 4.2 5.1 5.5 4.1C6.6 3.1 7.6 2.3 9.7 2.3C11.8 2.3 12.7 3.1 13.9 4.1C15.2 5.1 16.6 6.3 19.4 6.3C22.2 6.3 23.6 4.1 24.9 3.1L23.5 2.2C22.4 3.2 21.4 4 19.3 4C17.2 4 16.3 3.2 15.1 2.2C13.9 1.2 12.4 0 9.7 0C6.9 0 5.5 1.2 4.2 2.2C3 3.2 2.1 4 0 4C-2.1 4 -3 3.2 -4.2 2.2L-5.5 3.1Z" fill="#11D796"/>
 </g>
+</g>
 <defs>
-<clipPath id="clip0_185_1206">
+<clipPath id="clip0_255_697">
 <rect width="19" height="7" fill="white"/>
 </clipPath>
 </defs>
