@@ -24,3 +24,19 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     });
 }); 
+
+const homescroller = function () {
+    const t = document.querySelectorAll(".scroller");
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        t.forEach(t => {
+            t.setAttribute("data-animated", true);
+            const e = t.querySelector(".scroller__inner");
+            Array.from(e.children).forEach(child => {
+                const clone = child.cloneNode(true); // Clone the image
+                clone.setAttribute("aria-hidden", true); // Hide from screen readers
+                e.appendChild(clone); // Append the clone
+            });
+        });
+    }
+}();
+

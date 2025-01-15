@@ -118,10 +118,19 @@ hr.svg-divider {
 }
 
 .cards {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto 1rem auto;
-}
+    padding-top: 50px;
+    height: 100%; 
+    width: 100vw; /* Full viewport width */
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: baseline; /* Vertically center the content */
+    display: none;
+  }
+  
+  .cards img {
+    width: 90%; /* Set the desired width (e.g., 50% of the container) */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+  }
 
 .hero-text {
     max-width: 1070px;
@@ -170,8 +179,7 @@ hr.svg-divider {
     cursor: pointer;
     background: #e7e7e7;
     border: none;
-    padding: 1.5rem 3rem;
-    margin: 0;
+    padding: 18px 120px;
     font-family: inherit;
     font-size: inherit;
     position: relative;
@@ -188,7 +196,6 @@ hr.svg-divider {
 }
 
 .button--mimas {    
-	padding: 18px 80px;
 	font-size: 18px;
     font-weight: 500;
     cursor: pointer;
@@ -218,16 +225,6 @@ hr.svg-divider {
 }
 
 /* Button animation end */
-
-.cards img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-.cards {
-    margin-bottom: 0;
-}
 
 .highlight {
     color: var(--primary-color);
@@ -262,7 +259,7 @@ hr.svg-divider {
 }
 @media (max-width: 430px) {
     .container {
-        padding: 0 16 0 16px;
+        padding: 0 0 0 0;
     }
     .hero {
         padding: 0 0;
@@ -270,7 +267,7 @@ hr.svg-divider {
     }
     .hero-text h1 {
         font-size: 36px;
-        line-height: 40px;
+        line-height: 105%;
         margin-top: 0;
         margin-bottom: 8px;
         letter-spacing: -1.04px;
@@ -280,6 +277,25 @@ hr.svg-divider {
         font-size: 18px;
         line-height: 26px;
         margin: 16px 0 8px 0;
+    }
+    .scroller {
+        display: none;
+    }
+    .cards {
+        display: flex; /* Use flexbox for easy centering */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        width: 200%;
+        margin-left: -50%;
+        overflow: hidden; /* Prevent overflow */
+        display: block;
+    }
+    
+    .cards img {
+        max-width: 100%; /* Ensure the image doesn't exceed its container */
+        width: auto; /* Allow the width to adjust automatically */
+        height: auto; /* Allow the height to adjust automatically */
+        padding-bottom: 24px; /* Adjust padding as needed */
     }
 }
 
@@ -427,8 +443,8 @@ hr.svg-divider {
 
     .intro-placeholder {
         width: 100%;
-        right: -110px;
-        top: 80px;
+        right: 50px;
+        top: -80px;
       }
     
     .intro-images {
@@ -440,7 +456,7 @@ hr.svg-divider {
         background-image: url('img/image-01.jpg');
         background-repeat: no-repeat;
         background-size: auto;
-        background-position: 90% 10%; 
+        background-position: 60% 20%; 
         -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTEzIiBoZWlnaHQ9IjczMyIgdmlld0JveD0iMCAwIDkxMyA3MzMiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xOS44MzU3IDQxNi4xNkM3Mi4xMjg0IDI1OC40NDIgMTUzLjY1NCAxNDIuNDkgMjY0LjQxNCA2OC4zMDRDMzc1LjE3MyAtNS44ODIyNCA1MDguMjAyIC0xOC45MjM0IDY2My41MDIgMjkuMTgwNUM4MTguODAyIDc3LjI4NDQgOTAxLjQ2MyAxOTMuODU1IDkxMS40ODYgMzc4Ljg5M0M5MjEuNTA5IDU2My45MzEgODQzLjc1NCA2NzMuNTE3IDY3OC4yMjIgNzA3LjY1MUM1MTIuNjg5IDc0MS44NSA0MzguNTAyIDc0MS4xNjYgMTg1LjY2IDcwNS43OTVDMjIuODE3NyA2NzAuNDIzIC0zMi40NTcxIDU3My44NzkgMTkuODM1NyA0MTYuMTZaIiBmaWxsPSIjQTE1NEYyIi8+Cjwvc3ZnPg==);
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-size: contain;
@@ -454,7 +470,7 @@ hr.svg-divider {
         font-weight: 800;
         hyphens: manual;
         display: inline;
-        /*text-shadow: 0 0 10px #FCF3EE, 0 0 10px #FCF3EE; /* Glow effect */
+        text-shadow: 0 0 10px #FCF3EE, 0 0 10px #FCF3EE; /* Glow effect */
     }
     .cta-button {
         margin-top: 20px;
@@ -478,24 +494,25 @@ hr.svg-divider {
 
     .intro-placeholder {
         width: 100%;
-        right: 50px;
-        top: -10px;
-      }
+        right: 24%;
+        top: -100px;
+    }
     
-     .intro-content {
+    .intro-content {
         position: relative;
-        padding: 60px 0 0 20px;
+        padding: 160px 0 0 20px;
         width: 85%;
     }
+
     .intro-images {
         position: relative;
-        width: 120%;
-        height: 120%;
+        width: 90%;
+        height: 90%;
         background-image: url('img/image-01.jpg');
         background-repeat: no-repeat;
         background-size: auto;
-        background-position: 35% 0%; 
-        -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTEzIiBoZWlnaHQ9IjczMyIgdmlld0JveD0iMCAwIDkxMyA3MzMiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xOS44MzU3IDQxNi4xNkM3Mi4xMjg0IDI1OC40NDIgMTUzLjY1NCAxNDIuNDkgMjY0LjQxNCA2OC4zMDRDMzc1LjE3MyAtNS44ODIyNCA1MDguMjAyIC0xOC45MjM0IDY2My41MDIgMjkuMTgwNUM4MTguODAyIDc3LjI4NDQgOTAxLjQ2MyAxOTMuODU1IDkxMS40ODYgMzc4Ljg5M0M5MjEuNTA5IDU2My45MzEgODQzLjc1NCA2NzMuNTE3IDY3OC4yMjIgNzA3LjY1MUM1MTIuNjg5IDc0MS44NSA0MzguNTAyIDc0MS4xNjYgMTg1LjY2IDcwNS43OTVDMjIuODE3NyA2NzAuNDIzIC0zMi40NTcxIDU3My44NzkgMTkuODM1NyA0MTYuMTZaIiBmaWxsPSIjQTE1NEYyIi8+Cjwvc3ZnPg==);
+        background-position:bottom; /* Center the image */
+        -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTEzIiBoZWlnaHQ9IjczMyIgdmlld0JveD0iMCAwIDkxMyA3MzMiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xOS44MzU3IDQxNi4xNkM3Mi4xMjg0IDI1OC40NDIgMTUzLjY1NCAxNDIuNDkgMjY0LjQxNCA2OC4zMDRDMzc1LjE3MyAtNS44ODIyNCA1MDguMjAyIC0xOC45MjM0IDY2My41MDIgMjkuMTgwNUM4MTguODAxIDc3LjI4NDQgOTAxLjQ2MyAxOTMuODU1IDkxMS40ODYgMzc4Ljg5M0M5MjEuNTA5IDU2My45MzEgODQzLjc1NCA2NzMuNTE3IDY3OC4yMjIgNzA3LjY1MUM1MTIuNjg5IDc0MS44NSA0MzguNTAyIDc0MS4xNjYgMTg1LjY2IDcwNS43OTVDMjIuODE3NyA2NzAuNDIzIC0zMi40NTcxIDU3My44NzkgMTkuODM1NyA0MTYuMTZaIiBmaWxsPSIjQTE1NEYyIi8+Cjwvc3ZnPg==);
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-size: contain;
     }
@@ -508,7 +525,7 @@ hr.svg-divider {
         font-weight: 800;
         hyphens: manual;
         display: inline;
-        /*text-shadow: 0 0 10px #FCF3EE, 0 0 10px #FCF3EE; /* Glow effect */
+        text-shadow: 0 0 10px #FCF3EE, 0 0 10px #FCF3EE; /* Glow effect */
     }
 
     .intro-description {
@@ -521,6 +538,12 @@ hr.svg-divider {
         -webkit-box-decoration-break: clone; /* Webkit support */
     }
     .cta-button {
+        margin-top: 20px;
+        padding: 16px 48px 16px 48px;
+        width: 100%;
+        }
+
+    .button {
         margin-top: 20px;
         padding: 16px 48px 16px 48px;
         width: 100%;
@@ -631,8 +654,8 @@ hr.svg-divider {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding: 20px 0 20px 0;
+        width: fit-content;
     }
 
     .benefit {
@@ -640,7 +663,6 @@ hr.svg-divider {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        width: 100%;
         text-align: center;
         height: 36px;
     }
@@ -838,6 +860,12 @@ footer {
       to {
         background-position: 500px 19px;
       }
+}
+
+@media (max-width: 430px) {
+    .footer-content {
+        width: 88%;
+    }
 }
 
 /* Why Section Styles */
@@ -1040,8 +1068,8 @@ footer {
         width: 100%;
     }
     .why-benefit-item p {
-        font-size: 16px;
-        line-height: 22px;
+        font-size: 18px;
+        line-height: 140%;
         color: var(--secondary-text);
         margin: 0;
     }
@@ -1194,7 +1222,7 @@ footer {
     }
 
     .quote-text {
-        font-size: 16px;
+        font-size: 18px;
     }
     .quote-author h3 {
         font-size: 94%;
@@ -1751,4 +1779,89 @@ footer {
         line-height: 26px;
     }
 }
+/* Index animation scroller */
 
+.scroller {
+    position: relative; /* Required for absolute positioning */
+    width: 100%;
+    padding-top: 80px;
+    overflow: visible; /* Ensure the SVG is not clipped */
+}
+
+.svg-container {
+    position: absolute;
+    bottom: -5%; /* Overlap 50% into the next section */
+    left: 45%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for exact centering */
+    z-index: 10; /* Ensure it's above other content */
+    width: 150px; /* Adjust based on your SVG size */
+    height: 150px; /* Adjust based on your SVG size */
+}
+
+.arrow-svg {
+    width: 150%; /* Ensure the SVG fills its container */
+    height: 150%; /* Ensure the SVG fills its container */
+}
+
+.scroller::before,
+.scroller::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 30%; /* Adjust the width of the fading area */
+    pointer-events: none; /* Ensures the gradients don't interfere with interactions */
+    z-index: 2; /* Ensures the gradients are above the scroller content */
+}
+
+.scroller::before {
+    left: 0;
+    background: linear-gradient(to right, #FBF1EB, transparent);
+}
+
+.scroller::after {
+    right: 0;
+    background: linear-gradient(to left, #FBF1EB, transparent);
+}
+
+.scroller__inner img {
+    width: 20em;
+    border-radius: var(--basic-border-radius);
+}
+
+.scroller__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust this value to decrease the spacing */
+}
+
+.scroller .scroller__inner {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 40s) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+    --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+    --_animation-duration: 60s;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%); /* Move by half the width of the container */
+    }
+}
