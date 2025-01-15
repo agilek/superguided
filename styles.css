@@ -24,7 +24,6 @@ section {
 }
 
 .visible {
-    border: solid 2px yellowgreen;
     padding: 20px 20px 20px 20x;
 }
 
@@ -111,7 +110,7 @@ hr.svg-divider {
 
 .hero-text p {
     font-size: 24px;
-    color: var(--secondary-text);
+    color: var(--text-color);
     font-weight: 400;
 }
 
@@ -122,7 +121,6 @@ hr.svg-divider {
     min-width: 220px;
     align-items: center;
     justify-content: center;
-    gap: 8px;
     pointer-events: auto;
     cursor: pointer;
     color: #FFFFFF;
@@ -150,7 +148,7 @@ hr.svg-divider {
     cursor: pointer;
 	border-radius: 1000rem;
 	overflow: hidden;
-	color: #fff;
+	color: var(--white);
 	background: #F45D22;
 }
 
@@ -263,14 +261,15 @@ hr.svg-divider {
         display: flex; /* Use flexbox for easy centering */
         justify-content: center; /* Center horizontally */
         align-items: center; /* Center vertically */
-        width: 200%;
-        margin-left: -50%;
+        width: 100%;
+        margin-left: 0;
         overflow: hidden; /* Prevent overflow */
         display: block;
     }
     
     .cards img {
-        max-width: 100%; /* Ensure the image doesn't exceed its container */
+        max-width: 140%; /* Ensure the image doesn't exceed its container */
+        margin-left: -20%;
         width: auto; /* Allow the width to adjust automatically */
         height: auto; /* Allow the height to adjust automatically */
         padding-bottom: 24px; /* Adjust padding as needed */
@@ -380,13 +379,6 @@ hr.svg-divider {
     margin-top: -150px;
   }
 
-  .pick-button {    
-	font-size: 18px;
-    font-weight: 600;
-    margin: auto;
-    margin-bottom: -20px;
-
-    }
 
     .cities-main a {    
         color: var(--primary-color);
@@ -523,7 +515,7 @@ hr.svg-divider {
 @media (max-width: 430px) {
     .intro {
         position: relative;
-        width: 110%;
+        width: 100%;
         height: 100%;
         overflow: hidden;
     }
@@ -536,7 +528,7 @@ hr.svg-divider {
     .intro-content {
         position: relative;
         padding: 160px 0 0 20px;
-        width: 85%;
+        width: 90%;
     }
 
     .intro-image {
@@ -556,7 +548,6 @@ hr.svg-divider {
         hyphens: manual;
         display: inline;
         background-color: var(--background-color);
-        padding-right: 20px;
     }
 
     .intro-description {
@@ -683,7 +674,7 @@ hr.svg-divider {
         align-items: center;
         padding: 20px 0 20px 0;
         width: fit-content;
-        gap: 8px;
+        gap: 1px;
 
     }
 
@@ -718,12 +709,6 @@ hr.svg-divider {
 .testimonials {
     padding-top: 48px;
     padding-bottom: 80px;
-}
-
-.testimonial-cards-wrapper {
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    display: flex;
 }
 
 .testimonial-cards {
@@ -794,55 +779,45 @@ hr.svg-divider {
 
 @media (max-width: 430px) {
     .testimonials {
-        padding: 10px 0;
+        padding: 50px 0;
     }
     
     .testimonial-cards {
         display: flex;
-        gap: 24px;
+        flex-direction: column;
+        gap: 48px;
         overflow-x: visible;
-        padding: 20px 0 0 20px;
-        width: 100vw; /* Full viewport width */
-        margin-left: calc(-50vw + 50%); /* Center and overflow */
-        scroll-snap-type: x mandatory; /* Enable snap scrolling */
-        -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
-        cursor: grab; /* Change cursor to grab */
-        transition: transform 0.3s step-start; /* Smooth transition for snapping */
+        max-width: 90vw;
+        padding: 0 20px 0 20px;
+        margin-left: 0;
     }
     
     .testimonial-card {
-        padding: 32px 16px 32px 32px;
-        min-width: 70vw;
+        padding: 20px;
+        margin: auto;
+        min-width: 0;
     }
-
-    .quote-mark {
-        position: absolute;
-        top: -5px;
-        left: 32px;
-    }
-
-    .quote-mark img {
-        width: 40px;
-    }
-    
     .testimonial-text {
-        font-size: 18px;
-        line-height: 1.4;
-        margin-bottom: 10px;
-        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 16px;
     }
-    
+    .quote-mark {
+        top: -16px;
+        left: 16px;
+        width: 40px;
+        height: 32px;
+    }
     .author h3 {
-        margin: 0;
         font-size: 15px;
-        font-weight: 600;
     }
-    
+
     .author p {
-        margin: 4px 0 0;
-        color: var(--secondary-text);
-        font-weight: 400;
+        font-size: 12px;
+        margin-top: 0;
     }
+
+
 }
 
 /* Footer */
@@ -906,7 +881,7 @@ footer {
 
 .message {
     font-size: 14px;
-    padding-top: 4px;
+    padding-top: 6px;
     background-color: var(--background-color);
 }
 
@@ -965,6 +940,7 @@ footer {
 @media (max-width: 430px) {
     .footer-content {
         width: 88%;
+        padding-bottom: 30px;
     }
 }
 
@@ -1172,6 +1148,9 @@ footer {
         line-height: 140%;
         color: var(--secondary-text);
         margin: 0;
+    }
+    .image-card {
+        border-radius: 16px;
     }
 }
 
@@ -1482,11 +1461,11 @@ footer {
 @media (max-width: 430px) {
     .contents {
         height: auto;
-        padding: 1px 0;
+        padding: 10px 0;
     }
 
     .contents-container {
-        padding: 0 8px;
+        padding: 0 30px;
     }
     
     .contents-header h2 {
@@ -1521,6 +1500,18 @@ footer {
     .card-content h3 {
         font-size: 22px;
     }
+
+    .card-content h3 span {
+        font-weight: 600;
+        font-size: 16px;
+        padding: 2px 2px;
+        line-height: 20px;
+        text-align: center;
+        width: 20px;
+        height: 20px;
+        top: -3px;
+    }
+
     .card-content p {
         font-size: 16px;
         line-height: 22px;
@@ -2070,3 +2061,26 @@ footer {
       margin-bottom: 10px;
     }
   }
+
+  @media (max-width: 430px) {
+    .contact {
+      width: 90%;
+    }
+    .contact-boxes {
+        gap: 8px;
+      }
+      .contact p {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+
+    .hp {
+        margin-top: -50px;
+    }
+
+    @media (max-width: 430px) {
+        .hp {
+            margin-top: 15px;
+        }
+        }
