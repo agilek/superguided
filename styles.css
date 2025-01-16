@@ -513,32 +513,36 @@ hr.svg-divider {
         }
 }
 @media (max-width: 430px) {
-    .intro {
-        position: relative;
+    .intro-placeholder {
+        position: absolute;
         width: 100%;
-        height: 100%;
-        overflow: hidden;
+        height: auto; /* Adjust height as needed */
+        top: -10px;
+        left: 0;
+        -webkit-mask-image: none; /* Remove mask */
+        mask-image: none; /* Remove mask */
     }
 
-    .intro-placeholder {
-        width: 100%;
-        right: 24%;
-        top: -100px;
-    }
-    .intro-content {
+    .intro-images {
         position: relative;
-        padding: 160px 0 0 20px;
-        width: 90%;
+        width: 100%;
+        height: auto; /* Adjust height as needed */
+        left: 0;
+        -webkit-mask-image: none; /* Remove mask */
+        mask-image: none; /* Remove mask */
     }
 
     .intro-image {
         width: 100%;
-        height: 100%;
-        object-fit: cover; 
-        object-position: top;
+        height: auto; /* Adjust height as needed */
+        object-fit: cover; /* Ensure the image covers the area */
+        object-position: top; /* Adjust as needed */
+        border-radius: 0 0 24px 24px;
     }
-
     .intro-title {
+        margin-right: 20px;
+        padding-top: 16px;
+        padding-left: 16px;
         font-size: 36px;
         line-height: 40px;
         margin-top: 0;
@@ -546,7 +550,8 @@ hr.svg-divider {
         letter-spacing: -1.04px;
         font-weight: 800;
         hyphens: manual;
-        display: inline;
+        display: block;
+        border-radius: 16px;
         background-color: var(--background-color);
     }
 
@@ -554,12 +559,9 @@ hr.svg-divider {
         display: inline;
         font-size: 18px;
         line-height: 26px;
-        background-color: #FCF3EE;
-        border-radius: 20px;
         box-decoration-break: clone; /* Ensure the background follows each line */
         -webkit-box-decoration-break: clone; /* Webkit support */
-    }
-
+        }
     .button {
         margin-top: 20px;
         padding: 16px 48px 16px 48px;
@@ -574,13 +576,14 @@ hr.svg-divider {
         right: 15px;
         }
     .arrow {
-        transform: scaleY(-1);
-        position: relative;
-        display: inline;
+        position: absolute;
+        display: inline-block;
+        padding-left: 40%;
         border: 0;
-        top: 10px;
+        top: 150px;
         left: 0;
         z-index: 1000;
+        margin: auto;
         }
 
     .arrow img {
@@ -793,12 +796,12 @@ hr.svg-divider {
     }
     
     .testimonial-card {
-        padding: 20px;
+        padding: 32px;
         margin: auto;
         min-width: 0;
     }
     .testimonial-text {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 1.5;
         margin-bottom: 16px;
     }
@@ -809,12 +812,12 @@ hr.svg-divider {
         height: 32px;
     }
     .author h3 {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .author p {
-        font-size: 12px;
-        margin-top: 0;
+        font-size: 14px;
+        margin-top: 4px;
     }
 
 
@@ -1345,7 +1348,7 @@ footer {
 
 .contents-header h2 {
     font-size: 44px;
-    color: #2F2219;
+    color:var(--text-color);
     margin-bottom: 24px;
 }
 
@@ -1355,7 +1358,6 @@ footer {
     font-weight: 300;
     line-height: 32px; /* 133.333% */
     letter-spacing: 0;
-    color: #2F2219;
     padding-bottom: 20px;
 }
 
@@ -1513,8 +1515,8 @@ footer {
     }
 
     .card-content p {
-        font-size: 16px;
-        line-height: 22px;
+        font-size: 18px;
+        line-height: 150%;
     }
 } 
 
@@ -1773,8 +1775,8 @@ footer {
 }
 
 .faq-header h2 {
-    font-size: 36px;
-    color: #2F2219;
+    font-size: 44px;
+    color: var(--text-color);
     margin-bottom: 6px;
 }
 
@@ -1907,6 +1909,8 @@ footer {
     .faq-header p {
         font-size: 18px;
         line-height: 26px;
+        width: 90%;
+        margin: auto;
     }
 }
 /* Index animation scroller */
