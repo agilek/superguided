@@ -563,6 +563,7 @@ hr.svg-divider {
         border-radius: 0 0 16px 16px;
     }
     .intro-title {
+        margin-top: 50px;
         padding-top: 16px;
         margin-right: 12px;
         margin-bottom: -10px;
@@ -912,7 +913,6 @@ footer {
     color: var(--secondary-text);
     font-weight: 300;
     line-height: 1.3;
-    padding-bottom: 24px;
     margin: auto;
     text-align: center;
     top: -32px;
@@ -1464,6 +1464,10 @@ footer {
     font-weight: 300;
     line-height: 28px; /* 140% */
     color: #5B514B;
+}
+
+.card-content a {
+    color: var(--primary-color);
 }
 
 /* Responsive Styles */
@@ -2138,16 +2142,15 @@ footer {
         }
         .svg-container {
             position: absolute;
-            bottom: 56%; /* Overlap 50% into the next section */
-            left: 60%; /* Center horizontally */
-            transform: translateX(-50%); /* Adjust for exact centering */
+            top: 170px; /* Overlap 50% into the next section */
+            left: 56%; /* Center horizontally */
             z-index: 10; /* Ensure it's above other content */
-            width: 150px; /* Adjust based on your SVG size */
-            height: 150px; /* Adjust based on your SVG size */
+            width: 140px; /* Adjust based on your SVG size */
+            height: 80px; /* Adjust based on your SVG size */
         }
         
         .arrow-svg {
-            width: 80%; /* Ensure the SVG fills its container */
-            height: 80%; /* Ensure the SVG fills its container */
+            width: 100%;
+            height: 100%;
         }
         }

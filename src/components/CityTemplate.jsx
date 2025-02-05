@@ -165,7 +165,7 @@ function CityTemplate({ city, planner, getItineraryLink, tourGuideLink }) {
               </div>
               <div className="card-content">
                 <h3><span>1</span> Personalized itinerary</h3>
-                <p>A fully tailored plan for mobile or computer designed around your preferences, ensuring you see the sights and enjoy experiences that matter most to you.</p>
+                <p>A fully tailored plan designed around your preferences, ensuring you see the sights and enjoy experiences that matter most to you. <a href="/img/sample-itinerary.png" target="_blank">See sample</a></p>
               </div>
             </div>
 
