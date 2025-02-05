@@ -65,9 +65,9 @@ function Footer() {
       <div className="empty"></div>
       <hr className="svg-divider" />
       <span className="footer-credits">
-        <span className="text-cover">That's all, that's it! © SuperGuided.</span>
+        <span className="text-cover">SuperGuided © 2025</span>
         <br />
-        <span className="message">Be kind 🥰, respect each other 🧡 & travel a lot 🌍</span>
+        <span className="message">🌍 Explore more, worry less.</span>
       </span>
     </footer>
   );

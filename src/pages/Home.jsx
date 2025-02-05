@@ -62,11 +62,10 @@ function Home() {
           <img src="/img/cards/card-06.png" alt="Itineraries" />
           <img src="/img/cards/card-07.png" alt="Itineraries" />
         </div>
-        <div className="svg-container">
+      </section>
+      <div className="svg-container">
           <img src="/img/arrow-hp.svg" alt="Arrow" className="arrow-svg" />
         </div>
-      </section>
-
       <div className="container">
         <section className="hero">
           <div className="hero-text">

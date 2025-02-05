@@ -47,11 +47,9 @@ function CityTemplate({ city, planner, getItineraryLink, tourGuideLink }) {
         <div className="intro-content">
         <div className="intro-title-container">
           <div className="intro-title">
-            Get a <span className="highlight">personalized</span> {city} itinerary: Relax and enjoy your trip
+            Get a <span className="highlight">personalized</span> itinerary for your trip to {city}.
           </div>
-          <div className="arrow">
-            <img src="/img/arrow.png" alt="Arrow" />
-          </div>
+
           </div>
           <div className="intro-description"><span class="inline">
             Forget the stress and hours of planning and experience <strong>a&nbsp;truly authentic {city} adventure</strong>, tailored to your interests and time constraints.</span>
@@ -86,7 +84,7 @@ function CityTemplate({ city, planner, getItineraryLink, tourGuideLink }) {
           <div className="why-content">
             <div className="why-text">
               <div className="why-header">
-                <h2>Escape to {city} with a unique itinerary designed just for you by a local expert</h2>
+                <h2>Escape to {city} with a unique itinerary designed just for you by a&nbsp;local expert</h2>
                 <p>Planning a trip can be overwhelming, but it doesn't have to be! Imagine...</p>
               </div>
               
@@ -157,7 +155,7 @@ function CityTemplate({ city, planner, getItineraryLink, tourGuideLink }) {
         <div className="contents-container">
           <div className="contents-header">
             <h2>What will you get?</h2>
-            <p>For one price, you're getting more than just an itinerary for your trip. We want you to make your trip as smooth as possible.</p>
+            <p>For one price, you're getting <strong>more than just an itinerary</strong> for your trip. We want you to make your trip as smooth as possible.</p>
           </div>
           
           <div className="contents-grid">
@@ -316,7 +314,7 @@ function CityTemplate({ city, planner, getItineraryLink, tourGuideLink }) {
               </button>
               <div className="faq-answer">
                 <p>Planning a trip to {city} should be exciting, not exhausting! But let's face it, researching destinations, booking hotels, and creating a perfect itinerary can quickly become overwhelming.</p>
-                <p>That's where a travel planner comes in. I handle all the time-consuming logistics, so you can focus on enjoying your trip. I'll curate a personalized itinerary filled with unique experiences you might miss on your own.</p>
+                <p>That's where a travel planner comes in. We'll handle all the time-consuming logistics, so you can focus on enjoying your trip. We'll curate a personalized itinerary filled with unique experiences you might miss on your own.</p>
                 <p>Think of it as an investment in stress-free travel and unforgettable memories. You deserve a vacation where you can truly relax and explore, and I can help make that happen.</p>
               </div>
             </div>
@@ -329,7 +327,7 @@ function CityTemplate({ city, planner, getItineraryLink, tourGuideLink }) {
                 </div>
               </button>
               <div className="faq-answer">
-                <p>While technology offers generic travel plans, our itineraries are crafted with years of firsthand experience in {city}. We don't rely on algorithms or online articles; we leverage our deep knowledge of the city to curate unique experiences.</p>
+                <p>While today's technology full of AI offers generic travel plans, our itineraries are crafted with years of firsthand experience in {city}. We don't rely on algorithms or online articles; we leverage our deep knowledge of the city to curate unique experiences.</p>
                 <p>Our personalized itineraries go beyond the typical tourist route, offering hidden gems, local insights, and tailored recommendations. You'll discover authentic {city}, from its charming neighborhoods to its culinary delights.</p>
               </div>
             </div>
@@ -362,7 +360,7 @@ function CityTemplate({ city, planner, getItineraryLink, tourGuideLink }) {
                   <li><b>Booking links:</b> We'll provide direct links for booking tickets to attractions and tours, saving you time and hassle.</li>
                   <li><b>Support throughout your trip:</b> We're available via WhatsApp for any questions or assistance you may need while in {city}.</li>
                 </ul>
-                <p>Essentially, we <b>don't do</b> any booking or reservations on your behalf. This includes flights, accommodation, attractions and restaurants.</p>
+                <p>Essentially, you get everything you will need, <b>except for</b> any bookings or reservations made on your behalf. This includes flights, accommodation, attractions, and restaurants.</p>
               </div>
             </div>
 

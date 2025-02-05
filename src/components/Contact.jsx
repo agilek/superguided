@@ -18,7 +18,7 @@ function Contact() {
         </div>
         <div className="contact-box">
           <span className="contact-icon">🔥</span>
-          <strong>New planners</strong>
+          <strong>New partners</strong>
           <a href="mailto:join@superguided.com">join@superguided.com</a>
         </div>
       </div>
