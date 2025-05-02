@@ -1,10 +1,12 @@
 import React from 'react';
 import Footer from './Footer';
 import Contact from './Contact';
+import Modal from './Modal';
 import { useNavigate } from 'react-router-dom';
 
 function CityTemplate({ city, planner, getItineraryLink, tourGuideLink }) {
   const navigate = useNavigate();
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
 
   React.useEffect(() => {
     // FAQ Accordion functionality
@@ -165,7 +167,7 @@ function CityTemplate({ city, planner, getItineraryLink, tourGuideLink }) {
               </div>
               <div className="card-content">
                 <h3><span>1</span> Personalized itinerary</h3>
-                <p>A fully tailored plan designed around your preferences, ensuring you see the sights and enjoy experiences that matter most to you. <a href="/img/sample-itinerary.png" target="_blank">See sample</a></p>
+                <p>A fully tailored plan designed around your preferences, ensuring you see the sights and enjoy experiences that matter most to you. <a href="#" onClick={(e) => { e.preventDefault(); setIsModalOpen(true); }}>See sample</a></p>
               </div>
             </div>
 
@@ -390,6 +392,12 @@ function CityTemplate({ city, planner, getItineraryLink, tourGuideLink }) {
           </div>
         </div>
       </section>
+
+      <Modal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        imageUrl="/img/sample-itinerary.png"
+      />
 
       <Contact />
 
