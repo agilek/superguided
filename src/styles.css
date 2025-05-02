@@ -407,12 +407,11 @@ hr.svg-divider {
     }
 
     .cities-main a:hover {
-        background-image: url("img/wave-l.svg");
+        background-image: url("/img/wave-l.svg");
         background-repeat: repeat-x;
         background-position-x: 0%;
         background-position-y: 0%;
         background-size: auto auto;
-        background-repeat: repeat-x;
         animation: move 15s linear infinite;
         -webkit-animation: move 15s linear infinite;
         animation-play-state: running;
@@ -954,11 +953,10 @@ footer {
 .cities a:hover {
     color: #5947A3;
     background-image: url("/img/wave.svg");
-    background-repeat: repeat;
+    background-repeat: repeat-x;
     background-position-x: 0%;
     background-position-y: 0%;
     background-size: auto auto;
-    background-repeat: repeat-x;
     background-size: 19px 7px; 
     animation: move-footer 15s linear infinite;
     -webkit-animation: move-footer 15s linear infinite;
