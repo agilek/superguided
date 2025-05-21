@@ -35,46 +35,50 @@ import Venice from './pages/Venice';
 import Vienna from './pages/Vienna';
 import Warsaw from './pages/Warsaw';
 import Zurich from './pages/Zurich';
+import AffiliateTracker from './partners';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/barcelona" element={<Barcelona />} />
-      <Route path="/amsterdam" element={<Amsterdam />} />
-      <Route path="/athens" element={<Athens />} />
-      <Route path="/bergen" element={<Bergen />} />
-      <Route path="/berlin" element={<Berlin />} />
-      <Route path="/bilbao" element={<Bilbao />} />
-      <Route path="/bratislava" element={<Bratislava />} />
-      <Route path="/brussels" element={<Brussels />} />
-      <Route path="/budapest" element={<Budapest />} />
-      <Route path="/copenhagen" element={<Copenhagen />} />
-      <Route path="/dublin" element={<Dublin />} />
-      <Route path="/dubrovnik" element={<Dubrovnik />} />
-      <Route path="/edinburgh" element={<Edinburgh />} />
-      <Route path="/florence" element={<Florence />} />
-      <Route path="/geneva" element={<Geneva />} />
-      <Route path="/glasgow" element={<Glasgow />} />
-      <Route path="/hamburg" element={<Hamburg />} />
-      <Route path="/helsinki" element={<Helsinki />} />
-      <Route path="/istanbul" element={<Istanbul />} />
-      <Route path="/krakow" element={<Krakow />} />
-      <Route path="/lille" element={<Lille />} />
-      <Route path="/london" element={<London />} />
-      <Route path="/madrid" element={<Madrid />} />
-      <Route path="/milan" element={<Milan />} />
-      <Route path="/munich" element={<Munich />} />
-      <Route path="/paris" element={<Paris />} />
-      <Route path="/prague" element={<Prague />} />
-      <Route path="/reykjavik" element={<Reykjavik />} />
-      <Route path="/rome" element={<Rome />} />
-      <Route path="/stockholm" element={<Stockholm />} />
-      <Route path="/venice" element={<Venice />} />
-      <Route path="/vienna" element={<Vienna />} />
-      <Route path="/warsaw" element={<Warsaw />} />
-      <Route path="/zurich" element={<Zurich />} />
-    </Routes>
+    <>
+      <AffiliateTracker />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/barcelona" element={<Barcelona />} />
+        <Route path="/amsterdam" element={<Amsterdam />} />
+        <Route path="/athens" element={<Athens />} />
+        <Route path="/bergen" element={<Bergen />} />
+        <Route path="/berlin" element={<Berlin />} />
+        <Route path="/bilbao" element={<Bilbao />} />
+        <Route path="/bratislava" element={<Bratislava />} />
+        <Route path="/brussels" element={<Brussels />} />
+        <Route path="/budapest" element={<Budapest />} />
+        <Route path="/copenhagen" element={<Copenhagen />} />
+        <Route path="/dublin" element={<Dublin />} />
+        <Route path="/dubrovnik" element={<Dubrovnik />} />
+        <Route path="/edinburgh" element={<Edinburgh />} />
+        <Route path="/florence" element={<Florence />} />
+        <Route path="/geneva" element={<Geneva />} />
+        <Route path="/glasgow" element={<Glasgow />} />
+        <Route path="/hamburg" element={<Hamburg />} />
+        <Route path="/helsinki" element={<Helsinki />} />
+        <Route path="/istanbul" element={<Istanbul />} />
+        <Route path="/krakow" element={<Krakow />} />
+        <Route path="/lille" element={<Lille />} />
+        <Route path="/london" element={<London />} />
+        <Route path="/madrid" element={<Madrid />} />
+        <Route path="/milan" element={<Milan />} />
+        <Route path="/munich" element={<Munich />} />
+        <Route path="/paris" element={<Paris />} />
+        <Route path="/prague" element={<Prague />} />
+        <Route path="/reykjavik" element={<Reykjavik />} />
+        <Route path="/rome" element={<Rome />} />
+        <Route path="/stockholm" element={<Stockholm />} />
+        <Route path="/venice" element={<Venice />} />
+        <Route path="/vienna" element={<Vienna />} />
+        <Route path="/warsaw" element={<Warsaw />} />
+        <Route path="/zurich" element={<Zurich />} />
+      </Routes>
+    </>
   );
 }
 

@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from '../components/Footer';
 import Contact from '../components/Contact';
 import { Link } from 'react-router-dom';
+import { AffiliateLink } from '../partners.jsx';
 
 const ScrollToTopLink = ({ to, children }) => {
   const handleClick = () => {
@@ -9,7 +10,7 @@ const ScrollToTopLink = ({ to, children }) => {
   };
 
   return (
-    <Link to={to} onClick={handleClick}>{children}</Link>
+    <AffiliateLink to={to} onClick={handleClick}>{children}</AffiliateLink>
   );
 };
 
